@@ -64,7 +64,7 @@ public class RegistrationSpringComposer extends SelectorComposer<Window> {
 	@Listen("onClick = #submitButton")
 	public void register(){
 		
-		User newUser = new User();
+		User1 newUser = new User1();
 		newUser.setName(nameBox.getValue());
 		if (genderRadio.getSelectedIndex()==0){
 			newUser.setMale(true);
@@ -92,7 +92,7 @@ public class RegistrationSpringComposer extends SelectorComposer<Window> {
 			return;
 		}
 		
-		User newUser = new User();
+		User1 newUser = new User1();
 		newUser.setName(nameBox.getValue());
 		if (genderRadio.getSelectedIndex()==0){
 			newUser.setMale(true);
@@ -106,7 +106,7 @@ public class RegistrationSpringComposer extends SelectorComposer<Window> {
 		reset();
 	}
 	
-	private boolean validate(User user){
+	private boolean validate(User1 user){
 		return true;
 	}
 	private boolean validateInput(){
