@@ -1,0 +1,38 @@
+<zk>
+	<window id="window" border="normal" width="400px" apply="org.zkoss.simple.LoginComposer">
+		<zscript>
+		<![CDATA[
+		String user = (String)session.getAttribute("user");
+		]]></zscript>
+		<div id="loginDiv">
+			<grid>
+				<rows>
+					<row>
+						Name :
+						<textbox id="usertb" width="200px" value="" />
+					</row>
+					<row>
+						Password :
+						<textbox id="pwdtb" width="200px"
+							type="password" />(try 1234)
+					</row>
+				</rows>
+			</grid>			
+			<hbox pack="center" width="100%">
+				<button id="login" label="Login" />
+			</hbox>
+			<div>
+				<label id="msg" style="color:red"/>
+			</div>
+		</div>
+		<div id="userDiv" visible="${!empty user}">
+			<hbox pack="center" align="center" width="100%">
+			<div width="100%">
+				Welcome :
+				<label id="userName" />
+			</div>
+				<button id="logout" label="Logout" />
+			</hbox>
+		</div>
+	</window>
+</zk>
